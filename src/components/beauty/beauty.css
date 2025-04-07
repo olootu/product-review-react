@@ -1,0 +1,177 @@
+/* Mobile-first approach. */
+.project-page {
+    text-decoration: underline;
+  }
+  
+  .project-details {
+    display: block;
+    position: relative;
+    margin-bottom: 50px;
+    border-top: 10px solid #222;
+  }
+  
+  .review-title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  
+  .item {
+    height: 420px;
+    flex-basis: 350px;
+    padding: 10px;
+    box-shadow: 6px 7px 14px -3px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+  }
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .details {
+    flex-grow: 2;
+    position: relative;
+  }
+  
+  .pr-details {
+    padding: 10px;
+  }
+  
+  .filter-btns {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+  
+  .input-holder {
+    margin: 40px;
+  }
+  .input-holder input {
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .material-icons {
+    font-size: 2rem;
+    background: none;
+    position: relative;
+    top: 7px;
+    color: #c79a00;
+  }
+  
+  .search-label {
+    visibility: hidden;
+  }
+  
+  .message-text {
+    color: green;
+    font-weight: 800;
+  }
+  
+  .join-border {
+    border-left: 4px solid red;
+    border-top: 4px solid red;
+  }
+  
+  .likes-count {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 900;
+    font-size: 18px;
+  }
+  
+  button {
+    background: #ffc107;
+    color: #222222;
+    border: 1px solid #222222;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  #searchInput {
+    background: #ffffff;
+    color: #222222;
+  }
+  
+  .hero img {
+    object-position: 80% 25%;
+  }
+  
+  .join-proj {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .rating {
+    font-weight: 900;
+    padding-left: 10px;
+  }
+  
+  .review-response {
+    font-weight: 700;
+    font-size: 1.3rem;
+    background: #ffc107;
+    width: 40%;
+  }
+  
+  .no-review-error {
+    color: red;
+    display: inline-block;
+  }
+  
+  .all-review-link {
+    font-weight: 800;
+    color: green;
+    position: relative;
+    left: 45%;
+    cursor: pointer;
+  }
+  
+  /* Media query for desktop and larger screens */
+  @media only screen and (min-width: 1025px) {
+    .news {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .project-details {
+      display: flex;
+      justify-content: space-around;
+      gap: 50px;
+      margin-bottom: 10px;
+    }
+    .item {
+      height: 300px;
+      flex-basis: 350px;
+      margin-bottom: 35px;
+    }
+  
+    .input-holder,
+    .filter-btns {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 30px;
+      height: 45px;
+    }
+  
+    .input-holder {
+      margin: 40px;
+      height: 80px;
+      padding: 40px;
+      background: #222222;
+    }
+    .input-holder input {
+      padding: 10px;
+      flex-grow: 1;
+      margin-left: 50px;
+      font-size: 1.5rem;
+      margin-bottom: initial;
+      height: 25px;
+    }
+  
+    .all-review-link {
+      left: 70%;
+    }
+  }
+  
