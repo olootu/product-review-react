@@ -1,7 +1,6 @@
 import React from "react";
 import "./reviewlist.css";
-import ReviewItem from "../reviewitem/reviewItem";
-ReviewItem
+import ReviewItem  from '../../beauty/reviewitem/ReviewItem';
 
 function ReviewList({ data, closeDialog }) {
   return (
