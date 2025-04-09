@@ -11,6 +11,7 @@ function Beauty() {
   // Initialize dataFromLocalStorage with localStorage data
   const [dataFromLocalStorage, setDataFromLocalStorage] = useState(() => {
     const lstr = localStorage.getItem("products");
+    
     return lstr ? JSON.parse(lstr) : [];
   });
 
@@ -19,7 +20,7 @@ function Beauty() {
       try {
         const res = await fetch("https://fakestoreapi.com/products");
         const result = await res.json();
-        if (dataFromLocalStorage > 0) {
+        if (dataFromLocalStorage.length > 0) {
           setBeautyProducts(dataFromLocalStorage);
         } else {
           setBeautyProducts(result);
