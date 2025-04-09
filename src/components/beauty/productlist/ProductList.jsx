@@ -3,6 +3,7 @@ import Product from "../product/Product";
 function ProductList({
   data,
   beautyProducts,
+  setBeautyProducts
 }) {
  
   const [responseMsg, setResponseMsg] = useState(false);
@@ -10,7 +11,6 @@ function ProductList({
   const [showReviewListError, setShowReviewListError] = useState(false);
   const [showReview, setShowReview] = useState(false);
   const [showAllProductReviews, setShowAllProductReviews] = useState(false);
-  const [reviewListToDisplay, setReviewListToDisplay] = useState([]);
   // Initialize reviewList with localStorage data
   const [reviewList, setReviewList] = useState(() => {
     const savedReviews = localStorage.getItem("productReviews");
@@ -70,8 +70,6 @@ function ProductList({
     setProductId(id);
     setResponseMsg(false);
     setShowReview(false);
-    const filteredReviews = reviewList.filter((item) => item.id === id);
-    setReviewListToDisplay(filteredReviews);
   };
 
   return (
@@ -85,7 +83,7 @@ function ProductList({
         seeAllReviews={seeAllReviews}
         showAllProductReviews={showAllProductReviews}
         closeReview={closeReview}
-        reviewListToDisplay={reviewListToDisplay}
+        reviewList={reviewList}
         showReview={showReview}
         postReview={postReview}
       />

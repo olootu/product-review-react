@@ -50,6 +50,7 @@ function Beauty() {
                 <ProductList key={data.id}
                  data={data} 
                  beautyProducts={beautyProducts}
+                 setBeautyProducts={setBeautyProducts}
                  /> 
               );
             })}

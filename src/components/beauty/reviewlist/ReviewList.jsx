@@ -2,7 +2,9 @@ import React from "react";
 import "./reviewlist.css";
 import ReviewItem  from '../../beauty/reviewitem/ReviewItem';
 
-function ReviewList({ data, closeDialog }) {
+function ReviewList({ reviewList, closeDialog, productId }) {
+
+  const filteredReview = reviewList.filter(review => review.id === productId)
   return (
     <div className="new-join list pr-details">
       <div className="join-form">
@@ -10,8 +12,8 @@ function ReviewList({ data, closeDialog }) {
           X (close)
         </span>
         {
-          data.length > 0 ? (
-            data.map((rv) => {
+          filteredReview.length > 0 ? (
+            filteredReview.map((rv) => {
               return (
             <ReviewItem item={rv} key={rv.reviewId} />
             
@@ -23,10 +25,6 @@ function ReviewList({ data, closeDialog }) {
               to be the first reviewer.
             </span>
           )
-
-          // @for(rv of data; track rv.uniqueId) {
-          //  <app-review-list-item [eachReview]="rv"></app-review-list-item>
-          //  <ReviewList  />
         }
       </div>
     </div>

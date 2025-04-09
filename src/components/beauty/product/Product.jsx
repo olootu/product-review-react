@@ -12,7 +12,7 @@ function Product({
   toggleReview,
   seeAllReviews,
   showAllProductReviews,
-  reviewListToDisplay,
+  reviewList,
   closeReview,
   postReview,
   showReview,
@@ -75,7 +75,7 @@ function Product({
         {/* Review List */}
         {showAllProductReviews && productId === data.id && (
           <div>
-            <ReviewList data={reviewListToDisplay} closeDialog={closeReview} />
+            <ReviewList reviewList={reviewList} productId={productId} closeDialog={closeReview} />
           </div>
         )}
       </div>
